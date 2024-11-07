@@ -1,1 +1,22 @@
+#include <iostream> 
 
+int main() {
+    int number;  
+    std::cout << "Enter a number (n): ";  // Lūdzam lietotājam ievadīt skaitli
+    std::cin >> number;  
+
+    int sum = 0;  
+
+    // Cikls no 1 līdz `number`, lai pārbaudītu katru skaitli šajā intervālā
+    for (int i = 1; i <= number; i++) {
+        // Pārbaudām, vai skaitlis `i` dalās ar 3 vai 5 (atlikums ir 0)
+        if (i % 3 == 0 || i % 5 == 0) {
+            sum += i;  // Ja i dalās ar 3 vai 5, pievienojam to `sum`
+        }
+    }
+
+    
+    std::cout << "The sum of numbers divisible by 3 or 5 from 1 to " << number << " is: " << sum << std::endl;
+
+    return 0;  
+}
