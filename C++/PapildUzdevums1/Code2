@@ -2,16 +2,16 @@
 
 int main() {
     int number;  
-    std::cout << "Enter a number (n): ";  // Lūdzam lietotājam ievadīt skaitli
+    std::cout << "Enter a number (n): ";  
     std::cin >> number;  
 
     int sum = 0;  
 
-    // Cikls no 1 līdz `number`, lai pārbaudītu katru skaitli šajā intervālā
+    // Cikls no 1 līdz lietotaja number lai pārbaudītu katru skaitli šaja intervālā
     for (int i = 1; i <= number; i++) {
-        // Pārbaudām, vai skaitlis `i` dalās ar 3 vai 5 (atlikums ir 0)
+        // Pārbaudam, vai skaitlis i dalās ar 3 vai 5
         if (i % 3 == 0 || i % 5 == 0) {
-            sum += i;  // Ja i dalās ar 3 vai 5, pievienojam to `sum`
+            sum += i;  
         }
     }
 
