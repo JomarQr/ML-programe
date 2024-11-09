@@ -2,27 +2,24 @@
 #include <iomanip>
 
 int main() {
-    int multiplier, range;  // Definējam divus mainīgos: `multiplier` (reizinātājs) un `range` (intervāls)
+    int multiplier;
+    int range;
     
     std::cout << "Enter the multiplier: ";
     std::cin >> multiplier;
-    
-    // Lūdzam lietotājam ievadīt intervālu un saglabājam to mainīgajā `range`
     std::cout << "Enter the range: ";
     std::cin >> range;
-
     
     std::cout << "Multiplication table for " << multiplier << " up to range " << range << ":\n";
     
     // cikls, lai izveidotu reizināšanas tabulu līdz norādītajam intervālam
     for (int i = 1; i <= range; i++) {
-        // Izvadām reizināšanas darbību formatētā veidā, izmantojot std::setw(), lai iestatītu platumu (izlīdzināšanu) katram skaitlim
         std::cout << std::setw(2) << multiplier   // Platums 2, lai reizinātājs būtu vienādi izlīdzināts
                   << " * " 
                   << std::setw(2) << i            // Platums 2, lai reizināmais skaitlis būtu vienādi izlīdzināts
                   << " = " 
                   << std::setw(3) << multiplier * i  // Platums 3, lai rezultāts būtu vienādi izlīdzināts
-                  << std::endl;  // Pārejam uz jaunu rindu pēc katras reizināšanas darbības
+                  << std::endl;  
     }
 
     return 0;  
