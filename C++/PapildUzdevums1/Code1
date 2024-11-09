@@ -6,6 +6,7 @@ int main() {
     std::cin >> number;
 
     int sum = 0;
+    // cikls lidz tam number kuru izvelējas cilvēks, sum no 1 līdz n
     for (int i = 1; i <= number; i++) {
         sum += i;
     }
@@ -13,4 +14,3 @@ int main() {
     std::cout << "The sum from 1 to " << number << " is: " << sum << std::endl;
     return 0;
 }
-
