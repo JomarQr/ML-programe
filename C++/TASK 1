@@ -1,10 +1,8 @@
 #include <iostream>
 
 int main() {
-    // Definējam mainīgo `text` ar sākotnējo vērtību (virkni) kā "Programmas ir jaraksta cilvekiem, kas tas lasis!"
-    // Šis teksts tiks izmantots izvēlnes opcijās 2-5, līdz lietotājs izvēlēsies opciju 1, lai ievadītu jaunu tekstu.
     char text[100] = "Programmas ir jaraksta cilvekiem, kas tas lasis!";
-    int choice;  // Mainīgais, lai saglabātu lietotāja izvēlēto opciju numuru
+    int choice; 
 
     while (true) {
         // Attēlo izvēlni lietotājam
@@ -16,16 +14,15 @@ int main() {
                   << "5: Saskaita un attēlo cik katrs simbols atkārtojas teksta virknē\n"
                   << "6: Beigt darbību\n";
 
-        // Iegūst lietotāja izvēli
         std::cout << "Ievadiet izvēles numuru (1-6): ";
         std::cin >> choice;
 
-        // Pārbauda, vai ievade ir derīga (vai ievadīts ir skaitlis)
+        // Pārbauda, vai ievade ir skaitlis
         if (std::cin.fail()) {
             std::cin.clear();  // Atiestatām ievades kļūdas stāvokli
             std::cin.ignore(10000, '\n');  // Ignorējam atlikušos simbolus rindā
             std::cout << "Lūdzu, ievadiet skaitli starp 1 un 6." << std::endl;
-            continue;  // Atgriežamies pie izvēlnes
+            continue;  
         }
 
         // Izpildām darbību atkarībā no lietotāja izvēlētās opcijas
@@ -33,7 +30,7 @@ int main() {
             // Opcija 1: Ievadīt jaunu tekstu
             std::cin.ignore();  // Notīrām jaunas rindas simbolu no ievades bufera
             std::cout << "Ievadiet jaunu teksta virkni: ";
-            std::cin.getline(text, 100);  // Iegūst jaunu tekstu, ar ierobežojumu 100 simboli
+            std::cin.getline(text, 100);  
         } 
         else if (choice == 2) {
             // Opcija 2: Parādīt pašreizējo tekstu
@@ -59,8 +56,8 @@ int main() {
             std::cout << std::endl;
         } 
         else if (choice == 5) {
-            // Opcija 5: Saskaita un attēlo katra simbola biežumu (izņemot atstarpes)
-            int counts[256] = {0};  // Masīvs katra simbola biežuma uzskaitīšanai (ASCII vērtības 0-255)
+            // Opcija 5: Saskaita un attēlo katra simbola biežumu 
+            int counts[256] = {0};  // Masīvs katra simbola biežuma uzskaitīšanai 
             char order[256];  // Masīvs, lai saglabātu unikālo simbolu secību
             int orderIndex = 0;
 
@@ -85,7 +82,7 @@ int main() {
         else if (choice == 6) {
             // Opcija 6: Apturēt programmu
             std::cout << "Programma beidzas." << std::endl;
-            break;  // Iziet no while cilpas, beidzot programmu
+            break; 
         } 
         else {
             // Ja ievadītā izvēle nav starp 1 un 6
