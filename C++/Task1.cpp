@@ -2,7 +2,7 @@
 
 int main() {
     char text[100] = "Programmas ir jaraksta cilvekiem, kas tas lasis!";
-    int choice; 
+    int choice;
 
     while (true) {
         // Attēlo izvēlni lietotājam
@@ -63,13 +63,11 @@ int main() {
 
             for (int i = 0; text[i] != '\0'; i++) {
                 char ch = text[i];
-                if (ch != ' ') {  // Izlaižam atstarpes
-                    // Ja simbols parādās pirmo reizi, pievienojam to secības masīvam
-                    if (counts[ch] == 0) {
-                        order[orderIndex++] = ch;
-                    }
-                    counts[ch]++;  // Palielinām simbola skaitu
+                // Ja simbols parādās pirmo reizi, pievienojam to secības masīvam
+                if (counts[ch] == 0) {
+                    order[orderIndex++] = ch;
                 }
+                counts[ch]++;  // Palielinām simbola skaitu
             }
 
             // Attēlo simbolu biežumus pēc to parādīšanās secības
