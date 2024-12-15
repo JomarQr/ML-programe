@@ -1,8 +1,7 @@
 from data import fetch_data 
 from quiz_game import QuizBrain 
 
-if __name__ == "__main__":
-    
+if __name__ == "__main__":  
     raw_questions = fetch_data() 
     questions = [
         {"question": item["question"], "correct_answer": item["correct_answer"]}
