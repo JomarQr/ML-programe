@@ -1,7 +1,6 @@
 import requests
 
 def fetch_data():
-  
     PARAMETRS = {"amount": 3, "type": "boolean", "category": 18}
     url = "https://opentdb.com/api.php"
     response = requests.get(url, params=PARAMETRS)
